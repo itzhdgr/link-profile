@@ -43,9 +43,9 @@ const Profile = () => {
   const [entered, setEntered] = useState(false);
 
   return (
-    <div className="relative min-h-[100dvh] w-full bg-dark flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[100dvh] w-full bg-dark flex flex-col items-center justify-center overflow-y-auto py-10 pb-28">
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
             'radial-gradient(ellipse at 30% 20%, rgba(80,100,200,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(100,60,180,0.07) 0%, transparent 60%)',
@@ -82,9 +82,9 @@ const Profile = () => {
       <div
         className={`relative z-10 w-full max-w-[340px] mx-4 transition-all duration-700 ease-out ${entered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8 pointer-events-none'}`}
       >
-        <div className="profile-card rounded-3xl px-6 py-8 flex flex-col items-center text-center">
+        <div className="profile-card rounded-3xl px-6 py-7 flex flex-col items-center text-center">
           {/* Avatar */}
-          <div className="rounded-full overflow-hidden w-20 h-20 avatar-ring mb-4">
+          <div className="rounded-full overflow-hidden w-20 h-20 avatar-ring mb-3">
             <img
               src={`${import.meta.env.BASE_URL}avatar.png`}
               alt="Avatar"
@@ -94,26 +94,24 @@ const Profile = () => {
           </div>
 
           {/* Name */}
-          <h1
-            className="text-2xl font-bold mb-1 tracking-tight bg-gradient-to-r from-[#60A5FA] via-[#93C5FD] to-[#E0F2FE] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(96,165,250,0.3)]"
-          >
+          <h1 className="text-2xl font-bold mb-1 tracking-tight bg-gradient-to-r from-[#60A5FA] via-[#93C5FD] to-[#E0F2FE] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(96,165,250,0.3)]">
             HDGR
           </h1>
 
           {/* Bio */}
-          <p className="text-sm mb-7 font-light tracking-wide bg-gradient-to-r from-[#93C5FD] to-white/90 bg-clip-text text-transparent italic opacity-90">
+          <p className="text-sm mb-5 font-light tracking-wide bg-gradient-to-r from-[#93C5FD] to-white/90 bg-clip-text text-transparent italic opacity-90">
             So strange, so sweet
           </p>
 
           {/* Links */}
-          <div className="w-full flex flex-col gap-3">
+          <div className="w-full flex flex-col gap-2.5">
             {LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-btn rounded-2xl px-5 py-3.5 flex items-center gap-4 w-full transition-transform duration-200 hover:scale-[1.02]"
+                className="link-btn rounded-2xl px-5 py-3 flex items-center gap-4 w-full transition-transform duration-200 hover:scale-[1.02]"
                 style={{
                   background: 'linear-gradient(#18181b, #18181b) padding-box, linear-gradient(to right, #93C5FD, #FFFFFF) border-box',
                   border: '1.5px solid transparent',
