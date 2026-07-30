@@ -92,7 +92,7 @@ const Profile = () => {
             className="text-2xl font-semibold mb-1 tracking-tight"
             style={{ color: '#90b8ff' }}
           >
-            Huy
+            HDGR
           </h1>
 
           {/* Bio */}
