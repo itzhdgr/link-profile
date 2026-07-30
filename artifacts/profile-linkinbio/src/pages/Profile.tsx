@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaDiscord, FaFacebook } from 'react-icons/fa';
+import { FaDiscord, FaFacebook, FaYoutube } from 'react-icons/fa';
 import { AudioPlayer } from '../components/AudioPlayer';
 
 const AVATAR_FALLBACK = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100%" height="100%" fill="%23222"/><circle cx="50" cy="45" r="20" fill="%23555"/><path d="M20 90 Q 50 55 80 90" fill="%23555"/></svg>`;
