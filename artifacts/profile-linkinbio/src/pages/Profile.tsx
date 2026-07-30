@@ -48,27 +48,28 @@ const Profile = () => {
 
       {/* Landing overlay */}
       <div
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center cursor-pointer transition-opacity duration-700 ease-in-out ${entered ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
-        style={{ background: '#141414' }}
+        className={`fixed inset-0 z-40 flex items-center justify-center cursor-pointer transition-opacity duration-700 ease-in-out ${entered ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+        style={{ background: '#0e0e0e' }}
         onClick={() => setEntered(true)}
       >
-        <div className="rounded-full overflow-hidden w-24 h-24 avatar-ring mb-5">
-          <img
-            src={`${import.meta.env.BASE_URL}avatar.png`}
-            alt="Avatar"
-            className="w-full h-full object-cover"
-            onError={(e) => { e.currentTarget.src = AVATAR_FALLBACK; }}
+        <div className="relative flex items-center justify-center">
+          <div
+            className="absolute"
+            style={{
+              width: '480px',
+              height: '120px',
+              background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.04) 40%, transparent 70%)',
+              filter: 'blur(8px)',
+              transform: 'scaleX(1.4)',
+            }}
           />
+          <p
+            className="relative text-white text-2xl font-normal animate-pulse-glow"
+            style={{ letterSpacing: '0.01em' }}
+          >
+            click to enter...
+          </p>
         </div>
-        <p className="text-white/50 text-sm mb-3 tracking-wide font-light italic">
-          So strange, so sweet
-        </p>
-        <p
-          className="text-xs uppercase tracking-[0.35em] font-medium animate-pulse-glow"
-          style={{ color: 'rgba(140, 180, 255, 0.7)' }}
-        >
-          Click to enter...
-        </p>
       </div>
 
       {/* Main card */}
