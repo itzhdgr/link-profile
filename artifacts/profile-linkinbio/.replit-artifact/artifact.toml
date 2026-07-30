@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Profile / Link-in-Bio"
+version = "1.0.0"
+id = "artifacts/profile-linkinbio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18538
+
+[services.development]
+run = "pnpm --filter @workspace/profile-linkinbio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/profile-linkinbio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/profile-linkinbio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18538"
+BASE_PATH = "/"
