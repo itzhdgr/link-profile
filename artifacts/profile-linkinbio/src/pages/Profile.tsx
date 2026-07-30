@@ -31,6 +31,12 @@ const LINKS = [
     icon: <FaFacebook size={20} />,
     color: '#1877F2',
   },
+  {
+    href: 'https://www.youtube.com/@HDGRQuocHuy',
+    label: 'YouTube',
+    icon: <FaYoutube size={20} />,
+    color: '#FF0000',
+  },
 ];
 
 const Profile = () => {
@@ -89,14 +95,13 @@ const Profile = () => {
 
           {/* Name */}
           <h1
-            className="text-2xl font-semibold mb-1 tracking-tight"
-            style={{ color: '#90b8ff' }}
+            className="text-2xl font-bold mb-1 tracking-tight bg-gradient-to-r from-[#60A5FA] via-[#93C5FD] to-[#E0F2FE] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(96,165,250,0.3)]"
           >
             HDGR
           </h1>
 
           {/* Bio */}
-          <p className="text-sm mb-7 font-light" style={{ color: '#7a8faa' }}>
+          <p className="text-sm mb-7 font-light tracking-wide bg-gradient-to-r from-[#93C5FD] to-white/90 bg-clip-text text-transparent italic opacity-90">
             So strange, so sweet
           </p>
 
@@ -108,7 +113,11 @@ const Profile = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link-btn rounded-2xl px-5 py-3.5 flex items-center gap-4 w-full"
+                className="link-btn rounded-2xl px-5 py-3.5 flex items-center gap-4 w-full transition-transform duration-200 hover:scale-[1.02]"
+                style={{
+                  background: 'linear-gradient(#18181b, #18181b) padding-box, linear-gradient(to right, #93C5FD, #FFFFFF) border-box',
+                  border: '1.5px solid transparent',
+                }}
               >
                 <span
                   className="w-8 h-8 flex items-center justify-center rounded-xl flex-shrink-0"
