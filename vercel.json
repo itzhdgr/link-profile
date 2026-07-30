@@ -3,7 +3,9 @@
   "outputDirectory": "artifacts/profile-linkinbio/dist/public",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
