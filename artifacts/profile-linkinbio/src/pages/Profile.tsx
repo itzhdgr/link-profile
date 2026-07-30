@@ -32,7 +32,7 @@ const LINKS = [
     color: '#1877F2',
   },
   {
-    href: 'https://www.youtube.com/@HDGRQuocHuy',
+    href: 'https://youtube.com/@itzhdgr',
     label: 'YouTube',
     icon: <FaYoutube size={20} />,
     color: '#FF0000',
