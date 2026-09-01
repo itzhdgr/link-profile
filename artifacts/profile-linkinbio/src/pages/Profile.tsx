@@ -7,7 +7,7 @@ const SMP_FALLBACK = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000
 
 const LINKS = [
   {
-    href: 'https://discord.gg/JsRqrXqVt',
+    href: 'https://discord.gg/Pg3ct3MdbQ',
     label: 'Server Discord',
     icon: <FaDiscord size={20} />,
     color: '#5865F2',
