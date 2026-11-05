@@ -13,8 +13,8 @@ const LINKS = [
     color: '#5865F2',
   },
   {
-    href: 'https://discord.gg/5kpHzsWt86',
-    label: 'Only SMP',
+    href: 'https://discord.gg/Pg3ct3MdbQ',
+    label: 'HDGBot Support Server',
     icon: (
       <img
         src={`${import.meta.env.BASE_URL}only-smp.png`}
