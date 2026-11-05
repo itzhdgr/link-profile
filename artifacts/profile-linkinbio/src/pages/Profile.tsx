@@ -17,8 +17,8 @@ const LINKS = [
     label: 'HDGBot Support Server',
     icon: (
       <img
-        src={`${import.meta.env.BASE_URL}only-smp.png`}
-        alt="Only SMP"
+        src={`${import.meta.env.BASE_URL}hdgbot.jpg`}
+        alt="HDGBot"
         className="w-5 h-5 object-contain"
         onError={(e) => { e.currentTarget.src = SMP_FALLBACK; }}
       />
